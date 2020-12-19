@@ -1,5 +1,3 @@
- 2.2 KB
-  
 pipeline {
     agent any
     stages {
@@ -18,14 +16,7 @@ pipeline {
 		
 		
 	
-		//Code starts for stage PMD
-		/*
-		stage('PMD') {
-            steps {
-                sh 'mvn site'
-            }
-        }*/
-		//Code ends for stage PMD
+
 		
 		
 		
@@ -96,7 +87,7 @@ pipeline {
 		stage('System Test') {
             steps {
 				//Change git url below as per your forked github repository URL
-				git url: 'https://github.com/umangsaltuniv/EMSystemTests.git'
+				git url: 'https://github.com/RamGitBub/EMSystemTests.git'
             	sh 'mvn -Dtest=ExpenseManagerSystemTest test'
             }
         }
